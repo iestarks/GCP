@@ -1,4 +1,11 @@
 # GCP
+
+This is a 2 branch repo
+
+**** master
+**** vm1_terraform
+
+
 Google Cloud Resource creation using Terraform.
 
 This file is intended for those that want to view and confirm my familiarity with the technology, in respect to deploying a VM instance in google cloud.
