@@ -1,7 +1,7 @@
 resource "google_compute_instance" "default" {
   count = "${length(var.name_count)}"
 
-  name         = "list-${count.index+1}"
+  name         = "udemy-vm-${count.index+1}"
   machine_type = "${var.machine_type}"
   zone         = "us-east1-b"
 
