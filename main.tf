@@ -1,5 +1,7 @@
 resource "google_compute_instance" "default" {
-  name         = "udemy-demo-instance"
+  count = "${length(var.name_count)}"
+
+  name         = "list-${count.index+1}"
   machine_type = "${var.machine_type}"
   zone         = "us-east1-b"
 
@@ -36,4 +38,4 @@ resource "google_compute_instance" "default" {
   }
 }
 
-output "name" { value = "${google_compute_instance.default.name}"}
+output "name" { value = "${google_compute_instance.default.*.name}"}
