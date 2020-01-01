@@ -41,6 +41,18 @@ metadata_startup_script = "echo Irving > /hello.txt"
     scopes = ["userinfo-email", "compute-ro", "storage-ro"]
   }
 }
+resource "google_compute_disk" "default" {
+  name = "udemy-disk"
+  type = "pd-ssd"
+  zone = "us-east1-b"
+  size = "10"
+
+}
+
+resource "google_compute_attached_disk" "default" {
+  disk = google_compute_disk.default.self_link
+  instance = google_compute_instance.default[0].self_link
+}
 
 output "name" { value = "${google_compute_instance.default.*.name}"}
 
