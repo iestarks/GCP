@@ -1,8 +1,8 @@
 resource "google_compute_instance" "default" {
-  count = length(var.machine_count)
-
+  #count = length(var.machine_count)
+  count = "1"
   name         = "udemy-vm-${count.index+1}"
-  machine_type = "${var.machine_type === "production" ? var.machine_type : var.machine_type_dev"}
+  machine_type = "${var.machine_type === "production" ? var.machine_type : var.machine_type_dev}"
   zone         = "us-east1-b"
   can_ip_forward = "false"
   description = "This is Irvs test VM"
@@ -21,7 +21,8 @@ resource "google_compute_instance" "default" {
 labels {
 
   name = "udemy-vm-${count.index+1}"
-  machine_type = "${var.machine_type === "production" ? var.machine_type : var.machine_type_dev"}
+
+  machine_type = "${var.machine_type === "production" ? var.machine_type : var.machine_type_dev}"
 }
 
   // Local SSD disk
@@ -32,6 +33,7 @@ labels {
 
   network_interface {
     network = "default"
+  }
 
 metadata = {
   size = "20"
@@ -42,13 +44,13 @@ metadata_startup_script = "echo Irving" > "hello.txt"
     access_config {
       // Ephemeral IP
     }
-  }
+  
 
   metadata = {
     name = "udemy_demo"
   }
 
-  //metadata_startup_script = "echo hi > /test.txt"
+  metadata_startup_script = "echo hi > /test.txt"
 
   service_account {
     scopes = ["userinfo-email", "compute-ro", "storage-ro"]

@@ -1,11 +1,12 @@
 variable "image" { default = "ubuntu-1804-lts"}
 
-//variable "machine_type" { 
-    //type = map
-   // default = {
-    //    dev = "n1-standard-1"
-     //   prod = "Production-wont-work"
-     //   }
+#####got rid of it to allow more control of what type of machine is provisioned.
+# variable "machine_type" { 
+    #type = map
+   # default = {
+    #    dev = "n1-standard-1"
+     #   prod = "Production-wont-work"
+    # }
 
 
 variable "name_count" {default = ["udemy1", "udemy2", "udemy3"]}
