@@ -11,6 +11,16 @@ This is a 2 branch repo
 
 Google Cloud Resource creation using Terraform.
 
+
+
+This is a 2 branch repo
+
+**** master where master has one main.tf
+---
+**** vm1_terraform where secondary has main.tf,project.tf, where you would point your credentials to the directory where your .json
+---
+
+
 This file is intended for those that want to view and confirm my familiarity with the technology, in respect to deploying a VM instance in google cloud.
 
 Things you need are as follows:
