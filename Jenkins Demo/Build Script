@@ -1,0 +1,21 @@
+###Running a Nodejs app with NIGX, Terraform and Packer
+
+####Builds the New AMI instance 
+
+ARTIFACT = `packer build  -machine-readable packer-demo.json | awk -F, `$0 ~/artifact,0,id/ {print $6} '`
+AMI_ID = `echo $ARTIFACT | cut -d ':' -f2`
+echo 'variable "APP_INSTANCE_AMI" { default = " '${AMI_ID}'" }' > amivar.tf
+aws s3 cop amivar.tf s3://terraform-state-packer/amivar.tf
+
+
+### Job that runs the Terraform instance previous built from AMI
+
+cd jenkins-packer-demo
+scripts/configure-remote-state.sh
+aws s3 cp s3://terraform-state-packer/amivar.tf
+touch mykey
+touch mykey.pub
+terraform plan
+terraform apply -var APP_INSTANCE_AMI=1 -target aws_instance.app-instance
+
+
