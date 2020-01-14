@@ -3,7 +3,7 @@ module "gke" {
   project_id                 = "terraform-gcp-255501"
   name                       = "gke-test-1"
   region                     = "us-east1"
-  zones                      = ["us-east1-a", "us-east1-b", "us-east1-f"]
+  zones                      = ["us-east1-b", "us-east1-c", "us-east1-d"]
   network                    = "default"
   subnetwork                 = "default"
   ip_range_pods              = ""
