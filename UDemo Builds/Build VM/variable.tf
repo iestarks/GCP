@@ -14,3 +14,5 @@ variable "machine_count" { default = "1"}
 variable "environment" { default = "production"}
 variable "machine_type" { default = "n1-standard-1"}
 variable "machine_type_dev" { default = "n1-standard-2"}
+
+

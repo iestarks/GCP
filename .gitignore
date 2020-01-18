@@ -1,5 +1,29 @@
-Udemy Demos/Build VM/terraform.tfstate
-Udemy Demos/Build VM/terraform.tfstate.backup
-Udemy Demos/Build VM/secretkeys/secret-255501.json
-Udemy Demos/Build VM/.terraform/plugins/darwin_amd64/lock.json
-Udemy Demos/Build VM/secretkeys/starks_serviceaccount_ncsu.ee2000.json
+UDemo Builds/Build VM/terraform.tfstate.backup
+UDemo Builds/Build VM/secretkeys/secret-255501.json
+UDemo Builds/Build VM/.terraform/plugins/darwin_amd64/terraform-provider-google_v3.3.0_x5
+UDemo Builds/Build VM/.terraform/plugins/darwin_amd64/lock.json
+UDemo Builds/Build VM/terraform.tfstate
+UDemo Builds/Database/.terraform/plugins/darwin_amd64/terraform-provider-google_v3.3.0_x5
+Jenkins/nodejs-aws-jenkins-terraform
+UDemo Builds/Build Instance
+UDemo Builds/Bucket/terraform.tfstate
+UDemo Builds/Bucket/terraform.tfstate.backup
+UDemo Builds/Bucket/.terraform/modules/modules.json
+UDemo Builds/Bucket/.terraform/plugins/darwin_amd64/lock.json
+UDemo Builds/Bucket/.terraform/plugins/darwin_amd64/terraform-provider-google_v3.3.0_x5
+UDemo Builds/Build VM/.terraform/modules/modules.json
+UDemo Builds/Build VM/secretkeys/starks_serviceaccount_ncsu.ee2000.json
+UDemo Builds/Database/terraform.tfstate
+UDemo Builds/Database/terraform.tfstate.backup
+UDemo Builds/Database/.terraform/plugins/darwin_amd64/lock.json
+UDemo Builds/autoscaling/terraform.tfstate
+UDemo Builds/autoscaling/terraform.tfstate.backup
+UDemo Builds/autoscaling/.terraform/plugins/darwin_amd64/lock.json
+UDemo Builds/autoscaling/.terraform/plugins/darwin_amd64/terraform-provider-google_v3.4.0_x5
+Jenkins/nodejs-aws-jenkins-terraform
+UDemo Builds/Build Instance
+UDemo Builds/modules/instance/.terraform/plugins/darwin_amd64/lock.json
+UDemo Builds/modules/instance/.terraform/plugins/darwin_amd64/terraform-provider-google_v3.4.0_x5
+UDemo Builds/modules/instance/.terraform/modules/modules.json
+UDemo Builds/modules/instance/terraform.tfstate.backup
+UDemo Builds/Kubernettes/terraform.tfstate.backup
