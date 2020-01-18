@@ -8,7 +8,7 @@ variable "image" { default = "ubuntu-1804-lts"}
      #   prod = "Production-wont-work"
     # }
 
-
+variable "zone" { default = "us-east1-a"}
 variable "name_count" {default = ["udemy1", "udemy2", "udemy3"]}
 variable "machine_count" { default = "1"}
 variable "environment" { default = "production"}
