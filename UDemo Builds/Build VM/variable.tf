@@ -12,7 +12,7 @@ variable "zone" { default = "us-east1-a"}
 variable "name_count" {default = ["udemy1", "udemy2", "udemy3"]}
 variable "machine_count" { default = "1"}
 variable "environment" { default = "production"}
-variable "environment" { default = "Development"}
+variable "dev_environment" { default = "Development"}
 variable "machine_type" { default = "n1-standard-1"}
 variable "machine_type_dev" { default = "n1-standard-2"}
 
