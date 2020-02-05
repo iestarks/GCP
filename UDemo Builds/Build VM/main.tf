@@ -1,28 +1,28 @@
 resource "google_compute_instance" "default" {
   #count = length(var.machine_count)
-  count = "1"
-  name = "udemy-vm-${count.index+1}"
-    machine_type = var.machine_type == "production" ? var.machine_type : var.machine_type_dev
+  count = "2"
+  name = "udemy-irving-vm-${count.index+1}"
+  machine_type = var.machine_type == "Development" ? var.machine_type : var.machine_type_dev
   zone = "us-east1-b"
   can_ip_forward = "false"
   description = "This is Irvs test VM"
 
-  tags = ["allow-http", "allow-https"] ## Firewall rules
+  tags = ["allow-http", "allow-https","allow-http8080"] ## Firewall rules
 
   #tags = ["name", "udemy-demo"]
 
   boot_disk {
     initialize_params {
-      image = var.image
+      image = var.image2
       size = 20
     }
   }
 
 labels = {
 
-  name = "udemy-vm-${count.index+1}"
+  name = "udemy-vm-irving-${count.index+1}"
 
-  machine_type = var.machine_type == "production" ? var.machine_type : var.machine_type_dev
+  machine_type = var.machine_type == "Development" ? var.machine_type : var.machine_type_dev
 }
 
   network_interface {
