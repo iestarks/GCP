@@ -1,6 +1,6 @@
-variable "image" { default = "ubuntu-1804-lts"}
+variable "ubuntu" { default = "ubuntu-1804-lts"}
 
-variable "image2" { default = "rhel-6-v20191210"}
+variable "rhel6" { default = "rhel-6-v20191210"}
 
 #####got rid of it to allow more control of what type of machine is provisioned.
 # variable "machine_type" { 
